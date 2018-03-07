@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p" xmlns:c="http://www.springframework.org/schema/c"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd"
+	default-lazy-init="true">
+
+	<bean name="address1" class="com.myspring.core.springcore.constrargs.Address"
+		c:houseNbr="1" c:streetName="Creek Drive" />
+
+	<bean name="address2" class="com.myspring.core.springcore.constrargs.Address">
+		<constructor-arg name="houseNbr" value="2" />
+		<constructor-arg name="streetName" value="Popler Creek" />
+	</bean>
+
+	<bean name="accountHolder1" class="com.myspring.core.springcore.constrargs.AccountHodler">
+		<constructor-arg name="name" value="Johny" />
+		<constructor-arg name="address" ref="address1" />
+	</bean>
+
+	<bean name="accountHolder2" class="com.myspring.core.springcore.constrargs.AccountHodler"
+		c:name="Basha" c:address-ref="address2" />
+
+</beans>
