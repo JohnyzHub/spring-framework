@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p" xmlns:c="http://www.springframework.org/schema/c"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd"
+	default-lazy-init="true">
+
+	<context:annotation-config />
+
+	<bean name="eBook" class="com.myspring.core.advanced.autowire.annotation.EBook"
+		c:price="29.99" />
+	<bean name="paperBack"
+		class="com.myspring.core.advanced.autowire.annotation.PaperBack"
+		c:price="49.99" />
+
+	<bean name="packtPub"
+		class="com.myspring.core.advanced.autowire.annotation.PacktPub"
+		c:name="Spring Cookbook" />
+	<bean name="aPress" class="com.myspring.core.advanced.autowire.annotation.Apress"
+		c:name="Pro Spring" />
+
+	<bean name="review" class="com.myspring.core.advanced.autowire.annotation.Review"
+		p:comment="Excellent Book." />
+
+	<bean name="apressSize"
+		class="com.myspring.core.advanced.autowire.annotation.ApressPrintLength" />
+	<bean name="packtPubSize"
+		class="com.myspring.core.advanced.autowire.annotation.PacktPubPrintLength" />
+
+	<bean name="book" class="com.myspring.core.advanced.autowire.annotation.Book" />
+
+</beans>
