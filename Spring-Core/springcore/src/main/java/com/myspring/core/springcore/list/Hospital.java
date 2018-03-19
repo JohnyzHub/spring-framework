@@ -58,7 +58,8 @@ public class Hospital {
 
 	@Override
 	public String toString() {
-		return "Hospital [name=" + name + ", departments=" + departments + "]";
+		String collectionType = departments.getClass().getName();
+		return "Hospital [name=" + name + ", departments=" + departments + ", type=" + collectionType + "]";
 	}
 
 	private void destroy() {
