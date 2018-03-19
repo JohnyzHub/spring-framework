@@ -5,16 +5,14 @@
 	xsi:schemaLocation="http://www.springframework.org/schema/beans
     http://www.springframework.org/schema/beans/spring-beans.xsd
     http://www.springframework.org/schema/context
-    http://www.springframework.org/schema/context/spring-context.xsd"
-	default-lazy-init="true">
+    http://www.springframework.org/schema/context/spring-context.xsd">
 
 	<bean
-		class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
-		<property name="locations"
-			value="com/myspring/core/springcore/i18n/language.properties" />
+		class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer"
+		p:location="com/myspring/core/springcore/i18n/bean/language.properties">
 	</bean>
 
-	<bean name="welcome" class="com.myspring.core.springcore.i18n.Welcome"
-		p:greetings="${telugu}" />
+	<bean name="welcome" class="com.myspring.core.springcore.i18n.bean.Welcome"
+		p:greetings="${hindi}" />
 
 </beans>

@@ -1,4 +1,4 @@
-package com.myspring.core.springcore.i18n;
+package com.myspring.core.springcore.i18n.xml;
 
 import org.springframework.context.support.AbstractApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
@@ -7,12 +7,12 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
  * @author johnybasha
  *
  */
-public class TestLanguageProperties {
+public class TestDataSourceProperties {
 
 	/**
 	 * Default Constructor.
 	 */
-	public TestLanguageProperties() {
+	public TestDataSourceProperties() {
 		super();
 	}
 
@@ -21,10 +21,10 @@ public class TestLanguageProperties {
 	 */
 	public static void main(String[] args) {
 		AbstractApplicationContext appContext = new ClassPathXmlApplicationContext(
-				"com/myspring/core/springcore/i18n/language-config.xml");
+				"com/myspring/core/springcore/i18n/xml/datasource-config.xml");
 
-		Welcome welcome = (Welcome) appContext.getBean("welcome");
-		System.out.println(welcome);
+		DataSourceObject dataSourceObject = (DataSourceObject) appContext.getBean("dataSource");
+		System.out.println(dataSourceObject);
 
 		appContext.registerShutdownHook();
 		appContext.close();

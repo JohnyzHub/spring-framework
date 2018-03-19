@@ -1,4 +1,4 @@
-package com.myspring.core.springcore.i18n;
+package com.myspring.core.springcore.i18n.bean;
 
 /**
  * @author johnybasha

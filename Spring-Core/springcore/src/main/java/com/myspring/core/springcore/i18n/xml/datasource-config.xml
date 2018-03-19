@@ -9,9 +9,9 @@
 	default-lazy-init="true">
 
 	<context:property-placeholder
-		location="com/myspring/core/springcore/i18n/datasource.properties" />
+		location="com/myspring/core/springcore/i18n/xml/datasource.properties" />
 
-	<bean name="dataSource" class="com.myspring.core.springcore.i18n.DataSourceObject"
+	<bean name="dataSource" class="com.myspring.core.springcore.i18n.xml.DataSourceObject"
 		c:dbName="${dbName}" c:hostName="${hostName}" c:portNumber="${dbPort}" />
 
 </beans>
