@@ -8,7 +8,7 @@
 	<name>springcoreadvanced</name>
 	<url>http://maven.apache.org</url>
 	<properties>
-		<springframework.version>5.0.4.RELEASE</springframework.version>
+		<springframework.version>5.1.1.RELEASE</springframework.version>
 	</properties>
 
 	<dependencies>
